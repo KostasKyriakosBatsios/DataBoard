@@ -6,6 +6,6 @@
     <title>DataBoard</title>
 </head>
 <body>
-    
+    <a href="databoard.php">click me</a>
 </body>
 </html>
