@@ -1,0 +1,40 @@
+/* Body Tag */
+body {
+    transition: background-color 0.5s;
+}
+
+/* Header */
+#header {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+}
+
+.element {
+    padding-left: 30px;
+}
+
+.mode {
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+/* Main Content */
+h1.title {
+    text-align: center;
+}
