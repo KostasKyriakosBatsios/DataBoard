@@ -1,40 +1,232 @@
-/* Body Tag */
+/* Importing Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* root variables */
+:root {
+    ---color-primary: #7380ec;
+    ---color-coloring: #3bdea8;
+    ---color-success: #41f1b6;
+    ---color-warning: #ffbb55;
+    ---color-info-dark: #7d8da1;
+    ---color-info-light: #dce1eb;
+    ---color-dark: #363949;
+    ---color-light: rgba(132, 139, 200, 0.18);
+    ---color-primary-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(---color-light);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
 body {
-    transition: background-color 0.5s;
-}
-
-/* Header */
-#header {
-    height: max-content;
     width: 100vw;
-    display: flex;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
 }
 
-.element {
-    padding-left: 30px;
+a {
+    color: var(---color-dark);
 }
 
-.mode {
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 15px;
+p {
+    color: var(---color-info-dark);
 }
 
-/* Light Mode */
-.light-mode {
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+.text-muted {
+    color: var(---color-info-dark);
+}
+
+.coloring {
+    color: var(---color-coloring);
+}
+
+.primary {
+    color: var(---color-primary);
+}
+
+.success {
+    color: var(---color-success);
+}
+
+.warning {
+    color: var(---color-warning);
+}
+
+aside {
+    height: 100vh;
+    background: gray;
+}
+
+/* Container */
+.container {
+    display: grid;
+    width: 95%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+aside .top {
     background-color: white;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: black;
-    color: white;
+aside .logo {
+    display: flex;
+    gap: 0.8rem;
+}
+
+aside .logo img {
+    width: 4rem;
+    height: 4rem;
+}
+
+aside .close {
+    display: none;
+}
+
+/* Side bar */
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(---color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a.active {
+    background: var(---color-light);
+    color: var(---color-primary);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(---color-primary);
+}
+
+aside .sidebar a.active span {
+    color: var(---color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+    color: var(---color-primary);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
 }
 
 /* Main Content */
-h1.title {
-    text-align: center;
+/*some stuff*/
+
+/* Right Section */
+.right {
+    margin-top: 1.4rem;
+}
+
+.right .top {
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .top button {
+    display: none;
+}
+
+.right .theme-toggle {
+    background: var(---color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+.right .theme-toggle span {
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .theme-toggle span.active {
+    background: var(---color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
 }

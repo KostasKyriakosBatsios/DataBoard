@@ -5,18 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <script defer src="/js/script.js"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <title>DataBoard</title>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header">
-        <p class="name element"><b>DataBoard</b></p>
-        <p class="element"></p>
-        <button class="mode" onclick="toggleMode()">Light/Dark</button>
-    </div>
-    <!-- Content below the header -->
-    <div id="main_content">
-        <h1 class="title">Welcome to DataBoard</h1>
+    <!-- Container -->
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="/img/DataBoard's logo.png" alt="">
+                    <h2>Data<span class="coloring">Board</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">storage</span>
+                    <h3>Recent Data</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">smart_display</span>
+                    <h3>Top Videos</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-round">insights</span>
+                    <h3>Analytics</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main>
+            <h1>Welcome to Data<span class="coloring">Board</span></h1>
+        </main>
+        <!-- Right Section -->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-round">menu</span>
+                </button>
+                <div class="theme-toggle">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="login-signup">
+                    <button>Sign Up</button>
+                    <button>Login</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
