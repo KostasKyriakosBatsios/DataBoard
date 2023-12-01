@@ -1,11 +1,11 @@
-const sidebarMenu = document.querySelector("aside");
-const menuButton = document.querySelector("#menu-btn");
-const closeButton = document.querySelector("#close-btn");
+const sideMenu = document.querySelector("aside");
+const menuBtn = document.querySelector("#menu-button");
+const closeBtn = document.querySelector("#close-button");
 
-menuButton.addEventListener('click', () => {
-    sidebarMenu.style.display = 'block';
+menuBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'block';
 });
 
-closeButton.addEventListener('click', () => {
-    sidebarMenu.style.display = 'none';
+closeBtn.addEventListener('click', () => {
+    sideMenu.style.display = 'none';
 });
