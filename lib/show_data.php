@@ -1,11 +1,31 @@
 <?php
     require_once "dbconnect.php";
 
-    $query = "SELECT * FROM view_records ORDER BY user DESC, video DESC"; // Select All, in descending order based on User ID and Video ID.
+    // Creating pagination.
+    $start = 0;
+    $rows_per_page = 10;
 
-    $result = mysqli_query($con, $query);
+    // Getting the total number of records from the DB.
+    $rec = "SELECT * FROM view_records";
+    $records = $mysqli->query($rec);
+    $nr_of_rows = $records->num_rows;
 
-    if(mysqli_num_rows($result) > 0) { // If num rows of database table aren't 0.
+    // Calculating the number of rows per page.
+    $pages = ceil($nr_of_rows / $rows_per_page);
+
+    // Handling pagination through btns.
+    if(isset($_GET['page-nr'])) {
+        $page = $_GET['page-nr'] - 1;
+        $start = $page * $rows_per_page;
+    }
+
+    // Selecting All, in descending order based on User ID and Video ID.
+    // Also, performing pagination with 10 rows per page.
+    $data = "SELECT * FROM view_records ORDER BY user DESC, video DESC LIMIT $start, $rows_per_page";
+
+    $result = $mysqli->query($data);
+
+    if($result->num_rows > 0) { // If num rows of database table aren't 0.
         ?>
             <thead>
                 <tr>

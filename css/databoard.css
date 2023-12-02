@@ -398,10 +398,6 @@ main table tbody tr:last-child td {
     border: none;
 }
 
-main .recent-data .previous_next_btns {
-    display: flex;
-}
-
 main .recent-data a {
     text-align: center;
     display: block;

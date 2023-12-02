@@ -1,10 +1,14 @@
 <?php
     $host = 'localhost';
     $db = 'databoard';
+    require_once "db_upass.php";
+    
+    $user = $DB_USER;
+    $pass = $DB_PASS;
 
-    $con = mysqli_connect($host, "root", "", $db);
+    $mysqli = new mysqli($host, $user, $pass, $db);
 
-    if(!$con) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    if ($mysqli->connect_errno) {
+        echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }
 ?>

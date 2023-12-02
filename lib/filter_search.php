@@ -5,11 +5,11 @@
 
         $input = $_POST['input'];
 
-        $query = "SELECT * FROM view_records WHERE user = '{$input}%'"; // Select by User ID.
+        $searchByUserID = "SELECT * FROM view_records WHERE user = '{$input}%'"; // Search by User ID.
 
-        $result = mysqli_query($con, $query);
+        $result = $mysqli->query($searchByUserID);
 
-        if(mysqli_num_rows($result) > 0) { // If num rows of database table aren't 0.
+        if($result->num_rows > 0) { // If num rows of database table aren't 0.
             ?>
                 <table>
                     <thead>
