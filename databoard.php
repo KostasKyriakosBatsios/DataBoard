@@ -143,7 +143,7 @@
 
                 
                 <div class="pagination">
-
+                    <!-- Showing page info -->
                     <div class="page-info">
                         <?php
                             if(!isset($_GET['page-nr'])) {
@@ -346,7 +346,7 @@
     
     <!-- JS Scripts -->
     <script src="js/databoard.js" type="text/javascript"></script>
-    <script src="js/filter_search.js" type="text/javascript"></script>
+    <script src="js/filtering.js" type="text/javascript"></script>
     <script>
         let links = document.querySelectorAll('.pagination .page-numbers > a');
         let bodyId = parseInt(document.body.id) - 1;

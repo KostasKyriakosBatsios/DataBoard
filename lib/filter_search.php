@@ -5,7 +5,8 @@
 
         $input = $_POST['input'];
 
-        $searchByUserID = "SELECT * FROM view_records WHERE user = '{$input}%'"; // Search by User ID.
+        // Selecting All according to the User ID input, and in descending order based on User ID and Video ID.
+        $searchByUserID = "SELECT * FROM view_records WHERE user = '{$input}' ORDER BY user DESC, video DESC";
 
         $result = $mysqli->query($searchByUserID);
 
@@ -44,5 +45,5 @@
             // No data found message.
             echo "<h2 class='no-data-found'>No data Found...</h2>";
         }
-}
+    }
 ?>
