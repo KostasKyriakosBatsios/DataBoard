@@ -67,63 +67,9 @@
             </div>
             
             <div class="insights">
-                <!-- Total Users -->
-                <div class="users">
-                    <span class="material-icons-sharp">group</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Users</h3>
-                            <h1>500</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!-- Total Videos -->
-                <div class="videos">
-                    <span class="material-icons-sharp">smart_display</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Videos</h3>
-                            <h1>500</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>62%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
-                <!-- Total Views -->
-                <div class="views">
-                    <span class="material-icons-sharp">visibility</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Views</h3>
-                            <h1>500</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>35%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
+               <?php
+                    require_once "lib/insights.php";
+               ?>
             </div>
 
             <!-- Recent Data (Table) -->

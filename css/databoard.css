@@ -298,7 +298,7 @@ main .insights .progress {
     border-radius: 50%;
 }
 
-main .insights svg {
+/* main .insights svg {
     width: 7rem;
     height: 7rem;
 }
@@ -336,7 +336,7 @@ main .insights .progress .number {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 main .insights .small {
     margin-top: 1.3rem;
