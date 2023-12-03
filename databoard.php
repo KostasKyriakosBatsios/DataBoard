@@ -27,7 +27,7 @@
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="img/Logo.png" alt="">
+                    <img src="img/logo1.png" alt="">
                     <h2>Data<span class="success">Board</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -222,7 +222,7 @@
                         <small class="text-muted">Admin</small>
                     </div>
                     <div class="profile-photo">
-                        <img src="img/Admin.png" alt="">
+                        <img src="img/account.png" alt="">
                     </div>
                 </div>
             </div>
@@ -230,33 +230,9 @@
             <div class="top-videos" id="top-videos">
                 <h2>Top Videos</h2>
                 <div class="top-3-videos">
-                    <div class="vid">
-                        <div class="profile-photo">
-                            <img src="img/number-1.png" alt="">
-                        </div>
-                        <div class="vid-1-title">
-                            <p><b>#1 Video</b></p>
-                            <small class="text-muted">...#1 video's name goes here...</small>
-                        </div>
-                    </div>
-                    <div class="vid">
-                        <div class="profile-photo">
-                            <img src="img/number-2.png" alt="">
-                        </div>
-                        <div class="vid-2-title">
-                            <p><b>#2 Video</b></p>
-                            <small class="text-muted">...#2 video's name goes here...</small>
-                        </div>
-                    </div>
-                    <div class="vid">
-                        <div class="profile-photo">
-                            <img src="img/number-3.png" alt="">
-                        </div>
-                        <div class="vid-3-title">
-                            <p><b>#3 Video</b></p>
-                            <small class="text-muted">...#3 video's name goes here...</small>
-                        </div>
-                    </div>
+                    <?php 
+                        require_once "lib/top3_videos.php"; 
+                    ?>
                 </div>
             </div>
             <!-- Analytics -->
