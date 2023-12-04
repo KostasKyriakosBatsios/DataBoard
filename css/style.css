@@ -10,6 +10,7 @@
     --color-warning: #ffbb55;
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
+    --color-white: #fff;
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
     --color-primary-variant: #111e88;
@@ -25,6 +26,16 @@
     --padding-1: 1.2rem;
 
     --box-shadow: 0 2rem 3rem var(---color-light);
+}
+
+/* Dark theme variables */
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadowing: 0 2rem 3rem var(---color-light);
 }
 
 * {
@@ -153,8 +164,8 @@ aside .logo {
 }
 
 aside .logo img {
-    width: 2rem;
-    height: 2rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 aside .close {
@@ -163,7 +174,7 @@ aside .close {
 
 /* Mainly sidebar */
 aside .sidebar {
-    background: white;
+    background: var(--color-white);
     display: flex;
     flex-direction: column;
     height: 85vh;
@@ -248,7 +259,7 @@ main .insights {
 }
 
 main .insights > div {
-    background: white;
+    background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     margin-top: 1rem;
@@ -264,7 +275,7 @@ main .insights > div span {
     background: var(--color-primary);
     padding: 0.5rem;
     border-radius: 50%;
-    color: white;
+    color: var(--color-white);
     font-size: 2rem;
 }
 
@@ -348,7 +359,7 @@ main .recent-data h2 {
 }
 
 main .recent-data table {
-    background: white;
+    background: var(--color-white);
     width: 100%;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
@@ -415,7 +426,7 @@ main .recent-data a {
 
 .right .theme-toggler span.active {
     background: var(--color-primary);
-    color: white;
+    color: var(--color-white);
     border-radius: var(--border-radius-1);
 }
 
@@ -435,7 +446,7 @@ main .recent-data a {
 }
 
 .right .top-videos .vids {
-    background: white;
+    background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
@@ -463,7 +474,7 @@ main .recent-data a {
 }
 
 .right .analytics .item {
-    background: white;
+    background: var(--color-white);
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -488,7 +499,7 @@ main .recent-data a {
 
 .right .analytics .item .icon {
     padding: 0.6rem;
-    color: white;
+    color: var(--color-white);
     border-radius: 50%;
     background: var(--color-primary);
     display: flex;
@@ -565,7 +576,7 @@ main .recent-data a {
     aside {
         position: fixed;
         left: -100%;
-        background: white;
+        background: var(--color-white);
         width: 18rem;
         z-index: 3;
         box-shadow: 1rem 3rem 4rem var(--color-light);
@@ -636,7 +647,7 @@ main .recent-data a {
         align-items: center;
         padding: 0 0.8rem;
         height: 4.6rem;
-        background: white;
+        background: var(--color-white);
         width: 100%;
         margin: 0;
         z-index: 2;

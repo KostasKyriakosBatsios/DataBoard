@@ -1,298 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <script defer src="/js/script.js"></script>
-    <!-- Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <title>DataBoard</title>
-</head>
-<body>
-    <!-- Container -->
-    <div class="container">
-        <aside>
-            <!-- logo and close-open button -->
-            <div class="top">
-                <div class="logo">
-                    <img src="img/DataBoard.png" alt="">
-                    <h2>Data<span class="logo-coloring">Board</span></h2>
-                </div>
-                <div class="close" id="close-button">
-                    <span class="material-icons-sharp">close</span>
-                </div>
-            </div>
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <a href="#" class="active">
-                    <span class="material-icons-sharp">grid_view</span>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">storage</span>
-                    <h3>Recent Data</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">smart_display</span>
-                    <h3>Top Videos</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">insights</span>
-                    <h3>Analytics</h3>
-                </a>
-                <a href="#">
-                    <span class="material-icons-sharp">logout</span>
-                    <h3>Logout</h3>
-                </a>
-            </div>
-        </aside>
-        <!-- Main Section -->
-        <main>
-            <h1>Welcome to Data<span class="logo-coloring">Board</span></h1>
-            <div class="date">
-                <input type="date">
-            </div>
-            <!-- Insights -->
-            <div class="insights">
-                <!-- Total Users -->
-                <div class="users">
-                    <span class="material-icons-sharp">people</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Users</h3>
-                            <h1>500</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>81%</p>
-                            </div>
-                        </div>
+    <head>
+        <meta charset="UTF-8">
+        <!-- Responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <script defer src="/js/script.js"></script>
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <title>DataBoard</title>
+    </head>
+    <body>
+        <!-- Container -->
+        <div class="container">
+            <aside>
+                <!-- logo and close-open button -->
+                <div class="top">
+                    <div class="logo">
+                        <img src="img/DataBoard.png" alt="">
                     </div>
-                    <small class="text-muted">Last 24 hours</small>
-                </div>
-                <!-- Total Videos -->
-                <div class="videos">
-                    <span class="material-icons-sharp">smart_display</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Videos</h3>
-                            <h1>500</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>62%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 hours</small>
-                </div>
-                <!-- Total Views -->
-                <div class="views">
-                    <span class="material-icons-sharp">visibility</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Views</h3>
-                            <h1>500</h1>
-                        </div>
-                        <div class="progress">
-                            <svg>
-                                <circle cx="38" cy="38" r="36"></circle>
-                            </svg>
-                            <div class="number">
-                                <p>35%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <small class="text-muted">Last 24 hours</small>
-                </div>
-            </div>
-            <!-- Recent Data -->
-            <div class="recent-data">
-                <h2>Recent Data</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Video</th>
-                            <th>Start</th>
-                            <th>End</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>30</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>30</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>30</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>30</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>38</td>
-                        </tr>
-                        <tr>
-                            <td>30</td>
-                            <td>10</td>
-                            <td>10</td>
-                            <td>38</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <a href="#">Show All</a>
-            </div>
-        </main>
-        <!-- Right Section -->
-        <div class="right">
-            <!-- Top part(theme toggle, menu button and profile) -->
-            <div class="top">
-                <button id="menu-button">
-                    <span class="material-icons-sharp">menu</span>
-                </button>
-                <div class="theme-toggler">
-                    <span class="material-icons-sharp active">light_mode</span>
-                    <span class="material-icons-sharp">dark_mode</span>
-                </div>
-                <div class="profile">
-                    <div class="info">
-                        <p>Hey,<b>Kostas</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                    <div class="profile-photo">
-                        <img src="img/profile.png" alt="">
+                    <div class="close" id="close-button">
+                        <span class="material-icons-sharp">close</span>
                     </div>
                 </div>
-            </div>
-            <!-- Top Videos -->
-            <div class="top-videos">
-                <h2>Top Videos</h2>
-                <div class="vids">
-                    <div class="vid">
-                        <div class="order">
-                            <img src="img/profile.png">
-                        </div>
-                        <div class="message">
-                            <p><b>#1 Video</b></p>
-                            <small class="text-muted">#1 Video's name goes here</small>
-                        </div>
-                    </div>
-                    <div class="vid">
-                        <div class="order">
-                            <img src="img/profile.png">
-                        </div>
-                        <div class="message">
-                            <p><b>#2 Video</b></p>
-                            <small class="text-muted">#2 Video's name goes here</small>
-                        </div>
-                    </div>
-                    <div class="vid">
-                        <div class="order">
-                            <img src="img/profile.png">
-                        </div>
-                        <div class="message">
-                            <p><b>#3 Video</b></p>
-                            <small class="text-muted">#3 Video's name goes here</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Analytics -->
-            <div class="analytics">
-                <h2>Analytics</h2>
-                <div class="item most-recently-added-user">
-                    <div class="icon">
-                        <span class="material-icons-sharp">person_add</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Most recently added User</h3>
-                            <small class="text-muted">...last user's id...</small>
-                        </div>
-                        <h5 class="success">+1</h5>
-                    </div>
-                </div>
-                <div class="item most-recently-added-video">
-                    <div class="icon">
+                <!-- Sidebar -->
+                <div class="sidebar">
+                    <a href="#" class="active">
+                        <span class="material-icons-sharp">grid_view</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">storage</span>
+                        <h3>Recent Data</h3>
+                    </a>
+                    <a href="#">
                         <span class="material-icons-sharp">smart_display</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Most recently added Video</h3>
-                            <small class="text-muted">...last video's id...</small>
-                        </div>
-                        <h5 class="success">+1</h5>
-                    </div>
+                        <h3>Top Videos</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">insights</span>
+                        <h3>Analytics</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-sharp">logout</span>
+                        <h3>Logout</h3>
+                    </a>
                 </div>
-                <div class="item max-video-duration">
-                    <div class="icon">
-                        <span class="material-icons-sharp">incomplete_circle</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Max Video Duration</h3>
-                            <small class="text-muted">...max video's duration...</small>
-                        </div>
-                        <h5 class="success">max</h5>
-                    </div>
+            </aside>
+            <!-- Main Section -->
+            <main>
+                <h1>Welcome to Data<span class="logo-coloring">Board</span></h1>
+                <div class="date">
+                    <input type="date">
                 </div>
-                <div class="item min-video-duration">
-                    <div class="icon">
-                        <span class="material-icons-sharp">incomplete_circle</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Min Video Duration</h3>
-                            <small class="text-muted">...min video's duration...</small>
+                <!-- Insights -->
+                <div class="insights">
+                    <!-- Total Users -->
+                    <div class="users">
+                        <span class="material-icons-sharp">people</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Total Users</h3>
+                                <h1>500</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>81%</p>
+                                </div>
+                            </div>
                         </div>
-                        <h5 class="danger">min</h5>
+                        <small class="text-muted">Last 24 hours</small>
                     </div>
-                </div>
-                <div class="item max-view-time">
-                    <div class="icon">
+                    <!-- Total Videos -->
+                    <div class="videos">
+                        <span class="material-icons-sharp">smart_display</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Total Videos</h3>
+                                <h1>500</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>62%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 24 hours</small>
+                    </div>
+                    <!-- Total Views -->
+                    <div class="views">
                         <span class="material-icons-sharp">visibility</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Max View Time</h3>
-                            <small class="text-muted">...max view's time...</small>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Total Views</h3>
+                                <h1>500</h1>
+                            </div>
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>35%</p>
+                                </div>
+                            </div>
                         </div>
-                        <h5 class="success">max</h5>
+                        <small class="text-muted">Last 24 hours</small>
                     </div>
                 </div>
-                <div class="item min-view-time">
-                    <div class="icon">
-                        <span class="material-icons-sharp">visibility</span>
+                <!-- Recent Data -->
+                <div class="recent-data">
+                    <h2>Recent Data</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Video</th>
+                                <th>Start</th>
+                                <th>End</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>30</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>30</td>
+                                <td>10</td>
+                                <td>10</td>
+                                <td>38</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                </div>
+            </main>
+            <!-- Right Section -->
+            <div class="right">
+                <!-- Top part(theme toggle, menu button and profile) -->
+                <div class="top">
+                    <button id="menu-button">
+                        <span class="material-icons-sharp">menu</span>
+                    </button>
+                    <div class="theme-toggler">
+                        <span class="material-icons-sharp active">light_mode</span>
+                        <span class="material-icons-sharp">dark_mode</span>
                     </div>
-                    <div class="right">
+                    <div class="profile">
                         <div class="info">
-                            <h3>Min View Time</h3>
-                            <small class="text-muted">...min view's time...</small>
+                            <p>Hey,<b>Kostas</b></p>
+                            <small class="text-muted">Admin</small>
                         </div>
-                        <h5 class="danger">min</h5>
+                        <div class="profile-photo">
+                            <img src="img/profile.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Top Videos -->
+                <div class="top-videos">
+                    <h2>Top Videos</h2>
+                    <div class="vids">
+                        <div class="vid">
+                            <div class="order">
+                                <img src="img/profile.png">
+                            </div>
+                            <div class="message">
+                                <p><b>#1 Video</b></p>
+                                <small class="text-muted">#1 Video's name goes here</small>
+                            </div>
+                        </div>
+                        <div class="vid">
+                            <div class="order">
+                                <img src="img/profile.png">
+                            </div>
+                            <div class="message">
+                                <p><b>#2 Video</b></p>
+                                <small class="text-muted">#2 Video's name goes here</small>
+                            </div>
+                        </div>
+                        <div class="vid">
+                            <div class="order">
+                                <img src="img/profile.png">
+                            </div>
+                            <div class="message">
+                                <p><b>#3 Video</b></p>
+                                <small class="text-muted">#3 Video's name goes here</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Analytics -->
+                <div class="analytics">
+                    <h2>Analytics</h2>
+                    <div class="item most-recently-added-user">
+                        <div class="icon">
+                            <span class="material-icons-sharp">person_add</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Most recently added User</h3>
+                                <small class="text-muted">...last user's id...</small>
+                            </div>
+                            <h5 class="success">+1</h5>
+                        </div>
+                    </div>
+                    <div class="item most-recently-added-video">
+                        <div class="icon">
+                            <span class="material-icons-sharp">smart_display</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Most recently added Video</h3>
+                                <small class="text-muted">...last video's id...</small>
+                            </div>
+                            <h5 class="success">+1</h5>
+                        </div>
+                    </div>
+                    <div class="item max-video-duration">
+                        <div class="icon">
+                            <span class="material-icons-sharp">incomplete_circle</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Max Video Duration</h3>
+                                <small class="text-muted">...max video's duration...</small>
+                            </div>
+                            <h5 class="success">max</h5>
+                        </div>
+                    </div>
+                    <div class="item min-video-duration">
+                        <div class="icon">
+                            <span class="material-icons-sharp">incomplete_circle</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Min Video Duration</h3>
+                                <small class="text-muted">...min video's duration...</small>
+                            </div>
+                            <h5 class="danger">min</h5>
+                        </div>
+                    </div>
+                    <div class="item max-view-time">
+                        <div class="icon">
+                            <span class="material-icons-sharp">visibility</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Max View Time</h3>
+                                <small class="text-muted">...max view's time...</small>
+                            </div>
+                            <h5 class="success">max</h5>
+                        </div>
+                    </div>
+                    <div class="item min-view-time">
+                        <div class="icon">
+                            <span class="material-icons-sharp">visibility</span>
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <h3>Min View Time</h3>
+                                <small class="text-muted">...min view's time...</small>
+                            </div>
+                            <h5 class="danger">min</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
