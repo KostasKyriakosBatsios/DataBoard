@@ -6,7 +6,9 @@
         $input = $_POST['input'];
 
         // Selecting All according to the User ID input, and in descending order based on User ID and Video ID.
-        $searchByUserID = "SELECT * FROM view_records WHERE user = '{$input}' ORDER BY user DESC, video DESC";
+        $searchByUserID = "SELECT * FROM view_records 
+                           WHERE user = '{$input}' 
+                           ORDER BY user DESC, video DESC";
 
         $result = $mysqli->query($searchByUserID);
 

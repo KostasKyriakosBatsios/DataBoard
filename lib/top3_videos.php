@@ -5,16 +5,17 @@
     $video1 = "SELECT video, COUNT(*) AS video_count
                FROM view_records
                GROUP BY video DESC
-               LIMIT 1";
+               LIMIT 1"; # top 1 video.
+               
     $video2 = "SELECT video, COUNT(*) AS video_count
                FROM view_records
                GROUP BY video DESC
-               LIMIT 1 OFFSET 1";
+               LIMIT 1 OFFSET 1"; # top 2 video.
 
     $video2 = "SELECT video, COUNT(*) AS video_count
                FROM view_records
                GROUP BY video DESC
-               LIMIT 1 OFFSET 2";
+               LIMIT 1 OFFSET 2"; # top 3 video.
 
     $n1_video = $mysqli->query($video1);
     $n2_video = $mysqli->query($video2);

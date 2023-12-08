@@ -87,7 +87,6 @@
 
                 <div id="search_result"></div>
 
-                
                 <div class="pagination">
                     <!-- Showing page info -->
                     <div class="page-info">
@@ -184,84 +183,10 @@
             <!-- Analytics -->
             <div class="analytics" id="analytics">
                 <h2>Analytics</h2>
-                <div class="item person_added">
-                    <div class="icon">
-                        <span class="material-icons-sharp">person_add</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Most recently added User</h3>
-                            <small class="text-muted">...last user's id...</small>
-                        </div>
-                        <h5 class="success">+1</h5>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="item video_added">
-                    <div class="icon">
-                        <span class="material-icons-sharp">smart_display</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Most recently added Video</h3>
-                            <small class="text-muted">...last video's id...</small>
-                        </div>
-                        <h5 class="success">+1</h5>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="item max_vd">
-                    <div class="icon">
-                        <span class="material-icons-sharp">timelapse</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Max Video Duration</h3>
-                            <small class="text-muted">...max video's duration...</small>
-                        </div>
-                        <h5 class="success">max</h5>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="item min_vd">
-                    <div class="icon">
-                        <span class="material-icons-sharp">timelapse</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Min Video Duration</h3>
-                            <small class="text-muted">...min video's duration...</small>
-                        </div>
-                        <h5 class="danger">min</h5>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="item max_vt">
-                    <div class="icon">
-                        <span class="material-icons-sharp">visibility</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Max View Time</h3>
-                            <small class="text-muted">...max view's time...</small>
-                        </div>
-                        <h5 class="success">max</h5>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="item min_vt">
-                    <div class="icon">
-                        <span class="material-icons-sharp">visibility</span>
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <h3>Min View Time</h3>
-                            <small class="text-muted">...min view's time...</small>
-                        </div>
-                        <h5 class="danger">min</h5>
-                        <h3></h3>
-                    </div>
-                </div>
+                <?php
+                    require_once "lib/analytics.php";
+                ?>
+
             </div>
         </div>
     </div>

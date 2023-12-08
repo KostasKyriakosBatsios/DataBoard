@@ -5,7 +5,9 @@
 
     // Selecting All, in descending order based on User ID and Video ID.
     // Also, performing pagination with 10 rows per page.
-    $data = "SELECT * FROM view_records ORDER BY user DESC, video DESC LIMIT $start, $rows_per_page";
+    $data = "SELECT * FROM view_records 
+             ORDER BY user DESC, video DESC 
+             LIMIT $start, $rows_per_page";
 
     $result = $mysqli->query($data);
 
