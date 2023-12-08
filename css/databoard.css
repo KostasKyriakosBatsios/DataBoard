@@ -298,46 +298,6 @@ main .insights .progress {
     border-radius: 50%;
 }
 
-/* main .insights svg {
-    width: 7rem;
-    height: 7rem;
-}
-
-main .insights svg circle {
-    fill: none;
-    stroke: var(--color-primary);
-    stroke-width: 14;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-}
-
-main .insights .users svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .insights .videos svg circle {
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-}
-
-main .insights .views svg circle {
-    stroke-dashoffset: 35;
-    stroke-dasharray: 110;
-}
-
-main .insights .progress .number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 main .insights .small {
     margin-top: 1.3rem;
     display: block;

@@ -7,7 +7,7 @@
     text-align: center;
     display: block;
     margin: 1rem auto;
-    margin-right: 300px;
+    margin-right: 800px;
 }
 
 .pagination .page-numbers a {
@@ -21,18 +21,18 @@
 
 @media screen and (max-width: 1661px) {
     .pagination .page-info {
-        margin-right: 100px;
+        margin-right: 500px;
     }
 }
 
 @media screen and (max-width: 1485px) {
     .pagination .page-info {
-        margin-right: 50px;
+        margin-right: 200px;
     }
 }
 
 @media screen and (max-width: 600px) {
     .pagination .page-info {
-        margin-right: 5px;
+        margin-right: 20px;
     }
 }
