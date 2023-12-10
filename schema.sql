@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Διακομιστής:                  127.0.0.1
--- Έκδοση διακομιστή:            10.4.28-MariaDB - mariadb.org binary distribution
--- Λειτ. σύστημα διακομιστή:     Win64
--- HeidiSQL Έκδοση:              12.6.0.6765
+-- Host:                         127.0.0.1
+-- Server version:               10.4.28-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win64
+-- HeidiSQL Version:             12.6.0.6765
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -14,7 +14,17 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping structure for πίνακας databoard.view_records
+-- Dumping structure for table databoard.final_records
+CREATE TABLE IF NOT EXISTS `final_records` (
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  `video_id` int(11) unsigned DEFAULT NULL,
+  `video_title` varchar(255) DEFAULT NULL,
+  `video_duration` int(11) unsigned DEFAULT NULL,
+  `total_view_time` int(11) unsigned DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- Dumping structure for table databoard.view_records
 CREATE TABLE IF NOT EXISTS `view_records` (
   `user` int(11) unsigned DEFAULT NULL,
   `video` int(11) unsigned DEFAULT NULL,
@@ -22,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `view_records` (
   `end` int(11) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.view_records: ~24 rows (approximately)
+-- Dumping data for table databoard.view_records: ~27 rows (approximately)
 INSERT INTO `view_records` (`user`, `video`, `begin`, `end`) VALUES
 	(1, 10, 10, 25),
 	(1, 10, 10, 12),
@@ -49,7 +59,10 @@ INSERT INTO `view_records` (`user`, `video`, `begin`, `end`) VALUES
 	(7, 7, 90, 200),
 	(7, 7, 400, 700),
 	(8, 6, 44, 338),
-	(8, 4, 70, 180);
+	(8, 4, 70, 180),
+	(9, 11, 19, 83),
+	(9, 11, 37, 132),
+	(9, 11, 1, 50);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
