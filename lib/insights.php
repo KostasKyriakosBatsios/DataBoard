@@ -2,24 +2,23 @@
     require_once "dbconnect.php";
 
     // Selecting Total Users.
-    $users_query = "SELECT user
-                    FROM view_records
-                    GROUP BY user";
+    $users_query = "SELECT user_id
+                    FROM final_records
+                    GROUP BY user_id";
     $users = $mysqli->query($users_query);
     $total_users = $users->num_rows;
 
     // Selecting Total Videos.
-    $videos_query = "SELECT video
-                     FROM view_records
-                     GROUP BY video";
+    $videos_query = "SELECT video_id
+                     FROM final_records
+                     GROUP BY video_id";
     $videos = $mysqli->query($videos_query);
     $total_videos = $videos->num_rows;
 
     // Selecting Total Views.
-    // (potential for next time -> total_views instead of total_begin.)
-    $views_query = "SELECT begin
-                    FROM view_records
-                    GROUP BY begin";
+    $views_query = "SELECT total_view_time
+                    FROM final_records
+                    GROUP BY total_view_time";
     $views = $mysqli->query($views_query);
     $total_views = $views->num_rows;
 

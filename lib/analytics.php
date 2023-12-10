@@ -2,37 +2,35 @@
     require_once "dbconnect.php";
 
     // Selecting Most Recently Added User.
-    $user_query = "SELECT user
-                   FROM view_records
-                   GROUP BY user DESC
+    $user_query = "SELECT user_id
+                   FROM final_records
+                   GROUP BY user_id DESC
                    LIMIT 1";
 
     // Selecting Most Recently Added Video.
-    $video_query = "SELECT video
-                    FROM view_records
-                    GROUP BY video DESC
+    $video_query = "SELECT video_id
+                    FROM final_records
+                    GROUP BY video_id DESC
                     LIMIT 1";
 
     // Selecting Max Video Duration. 
-    // (potential for next time -> max_video_duration instead of max_video.)
-    $video_maxDur_query = "SELECT MAX(video) AS max_video_duration
-                           FROM view_records";
+    // (potential for next time -> max_video_duration instead of max_video_id.)
+    $video_maxDur_query = "SELECT MAX(video_id) AS max_video_duration
+                           FROM final_records";
 
     // Selecting Min Video Duration. 
-    // (potential for next time -> min_video_duration instead of min_video.)
-    $video_minDur_query = "SELECT MIN(video) AS min_video_duration
-                           FROM view_records";
+    // (potential for next time -> min_video_duration instead of min_video_id.)
+    $video_minDur_query = "SELECT MIN(video_id) AS min_video_duration
+                           FROM final_records";
 
     // Selecting Max View Time. 
-    // (potential for next time -> max_view_time instead of max_end.)
-    $maxViewTime_query = "SELECT MAX(end) AS max_view_time
-                          FROM view_records";
+    $maxViewTime_query = "SELECT MAX(total_view_time) AS max_view_time
+                          FROM final_records";
 
                            
     // Selecting Min View Time. 
-    // (potential for next time -> min_view_time instead of min_end.)
-    $minViewTime_query = "SELECT MIN(end) AS min_view_time
-                          FROM view_records;";
+    $minViewTime_query = "SELECT MIN(total_view_time) AS min_view_time
+                          FROM final_records;";
 
     $recently_added_user = $mysqli->query($user_query);
     $recently_added_video = $mysqli->query($video_query);
@@ -55,9 +53,9 @@
                         <small class="text-muted">
                             <?php 
                                 while($row = mysqli_fetch_assoc($recently_added_user)) { 
-                                    $user_id = $row['user'];
+                                    $userID = $row['user_id'];
                                     ?>
-                                        Last User ID: <strong><?php echo $user_id; ?></strong>
+                                        Last User ID: <strong><?php echo $userID; ?></strong>
                                     <?php
                                 } 
                             ?> 
@@ -77,9 +75,9 @@
                         <small class="text-muted">
                             <?php 
                                 while($row = mysqli_fetch_assoc($recently_added_video)) { 
-                                    $video_id = $row['video'];
+                                    $videoID = $row['video_id'];
                                     ?>
-                                        Last Video ID: <strong><?php echo $video_id; ?></strong>
+                                        Last Video ID: <strong><?php echo $videoID; ?></strong>
                                     <?php
                                 } 
                             ?> 

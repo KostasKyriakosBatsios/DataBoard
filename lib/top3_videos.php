@@ -2,19 +2,19 @@
     require_once "dbconnect.php";
 
     // Selecting the top 3 videos, that appears the most (most seen).
-    $video1 = "SELECT video, COUNT(*) AS video_count
-               FROM view_records
-               GROUP BY video DESC
+    $video1 = "SELECT video_id, COUNT(*) AS video_count
+               FROM final_records
+               GROUP BY video_id DESC
                LIMIT 1"; # top 1 video.
                
-    $video2 = "SELECT video, COUNT(*) AS video_count
-               FROM view_records
-               GROUP BY video DESC
+    $video2 = "SELECT video_id, COUNT(*) AS video_count
+               FROM final_records
+               GROUP BY video_id DESC
                LIMIT 1 OFFSET 1"; # top 2 video.
 
-    $video2 = "SELECT video, COUNT(*) AS video_count
-               FROM view_records
-               GROUP BY video DESC
+    $video2 = "SELECT video_id, COUNT(*) AS video_count
+               FROM final_records
+               GROUP BY video_id DESC
                LIMIT 1 OFFSET 2"; # top 3 video.
 
     $n1_video = $mysqli->query($video1);
@@ -32,11 +32,11 @@
                     <small class="text-muted">
                         <?php 
                             while($row = mysqli_fetch_assoc($n1_video)) { 
-                                $video_id = $row['video'];
-                                $video_count = $row['video_count'];
+                                $videoID = $row['video_id'];
+                                $videoCount = $row['video_count'];
                                 ?>
-                                    Video with ID: <strong><?php echo $video_id; ?></strong>,
-                                    Total Count: <strong><?php echo $video_count; ?></strong>
+                                    Video with ID: <strong><?php echo $videoID; ?></strong>,
+                                    Total Count: <strong><?php echo $videoCount; ?></strong>
                                 <?php
                             } 
                         ?>                                     
@@ -52,11 +52,11 @@
                     <small class="text-muted">
                         <?php 
                             while($row = mysqli_fetch_assoc($n2_video)) { 
-                                $video2_id = $row['video'];
-                                $video2_count = $row['video_count'];
+                                $video2ID = $row['video_id'];
+                                $video2Count = $row['video_count'];
                                 ?>
-                                    Video with ID: <strong><?php echo $video2_id; ?></strong>,
-                                    Total Count: <strong><?php echo $video2_count; ?></strong>
+                                    Video with ID: <strong><?php echo $video2ID; ?></strong>,
+                                    Total Count: <strong><?php echo $video2Count; ?></strong>
                                 <?php
                             } 
                         ?>                                     
@@ -72,11 +72,11 @@
                     <small class="text-muted">
                         <?php 
                             while($row = mysqli_fetch_assoc($n3_video)) { 
-                                $video3_id = $row['video'];
-                                $video3_count = $row['video_count'];
+                                $video3ID = $row['video_id'];
+                                $video3Count = $row['video_count'];
                                 ?>
-                                    Video with ID: <strong><?php echo $video3_id; ?></strong>,
-                                    Total Count: <strong><?php echo $video3_count; ?></strong>
+                                    Video with ID: <strong><?php echo $video3ID; ?></strong>,
+                                    Total Count: <strong><?php echo $video3Count; ?></strong>
                                 <?php
                             } 
                         ?>
