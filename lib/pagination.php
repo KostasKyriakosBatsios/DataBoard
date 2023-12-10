@@ -4,7 +4,7 @@
     $rows_per_page = 10;
 
     // Getting the total number of records from the DB.
-    $rec = "SELECT * FROM view_records";
+    $rec = "SELECT * FROM final_records";
     $records = $mysqli->query($rec);
     $nr_of_rows = $records->num_rows;
 
