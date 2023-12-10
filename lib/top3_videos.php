@@ -5,21 +5,24 @@
     $video1 = "SELECT video_id, COUNT(*) AS video_count
                FROM final_records
                GROUP BY video_id
+               ORDER BY video_count DESC
                LIMIT 1"; # top 1 video.
                
     $video2 = "SELECT video_id, COUNT(*) AS video_count
                FROM final_records
                GROUP BY video_id
+               ORDER BY video_count DESC
                LIMIT 1 OFFSET 1"; # top 2 video.
 
-    $video2 = "SELECT video_id, COUNT(*) AS video_count
+    $video3 = "SELECT video_id, COUNT(*) AS video_count
                FROM final_records
                GROUP BY video_id
+               ORDER BY video_count DESC
                LIMIT 1 OFFSET 2"; # top 3 video.
 
     $n1_video = $mysqli->query($video1);
     $n2_video = $mysqli->query($video2);
-    $n3_video = $mysqli->query($video2);
+    $n3_video = $mysqli->query($video3);
 
     if($n1_video->num_rows > 0 && $n2_video->num_rows > 0 && $n3_video->num_rows > 0) { // If num rows of database table aren't 0.
         ?>
