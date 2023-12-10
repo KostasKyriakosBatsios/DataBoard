@@ -4,17 +4,17 @@
     // Selecting the top 3 videos, that appears the most (most seen).
     $video1 = "SELECT video_id, COUNT(*) AS video_count
                FROM final_records
-               GROUP BY video_id DESC
+               GROUP BY video_id
                LIMIT 1"; # top 1 video.
                
     $video2 = "SELECT video_id, COUNT(*) AS video_count
                FROM final_records
-               GROUP BY video_id DESC
+               GROUP BY video_id
                LIMIT 1 OFFSET 1"; # top 2 video.
 
     $video2 = "SELECT video_id, COUNT(*) AS video_count
                FROM final_records
-               GROUP BY video_id DESC
+               GROUP BY video_id
                LIMIT 1 OFFSET 2"; # top 3 video.
 
     $n1_video = $mysqli->query($video1);
