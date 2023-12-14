@@ -16,10 +16,8 @@
         <header>
             <h2 class="logo">Data<span style="color: #3bdea8;">Board</span></h2>
             <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="index.php">Home</a>
+                <a href="about.php">About</a>
                 <button class="login-btn">Login</button>
             </nav>
         </header>
@@ -45,6 +43,7 @@
                         <input type="password" id="password" name="password" required>
                         <label for="password">Password</label>
                     </div>
+                    <!-- php operation for signing in to DataBoard -->
                     <button type="submit" class="signin-btn">Sign in</button>
                 </form>
             </div>
