@@ -33,7 +33,18 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.users: ~0 rows (approximately)
+-- Dumping data for table databoard.users: ~10 rows (approximately)
+INSERT INTO `users` (`id`, `username`) VALUES
+	(1, 'Alex Oik'),
+	(2, 'Kostas Bats'),
+	(3, 'Michael Jones'),
+	(4, 'Emily Brown'),
+	(5, 'David Wilson'),
+	(6, 'Sophia Davis'),
+	(7, 'Daniel Miller'),
+	(8, 'Olivia Martin'),
+	(9, 'William Taylor'),
+	(10, 'Emma Anderson');
 
 -- Dumping structure for table databoard.videos
 CREATE TABLE IF NOT EXISTS `videos` (
@@ -43,7 +54,19 @@ CREATE TABLE IF NOT EXISTS `videos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.videos: ~0 rows (approximately)
+-- Dumping data for table databoard.videos: ~11 rows (approximately)
+INSERT INTO `videos` (`id`, `title`, `duration`) VALUES
+	(1, 'Introduction to Programming', 930),
+	(2, 'Web Development Basics', 1365),
+	(3, 'Data Science Fundamentals', 1100),
+	(4, 'Machine Learning Basics', 1510),
+	(5, 'Mobile App Development Overview', 1215),
+	(6, 'Database Design Principles', 1075),
+	(7, 'Cybersecurity Essentials', 880),
+	(8, 'Cloud Computing Basics', 1170),
+	(9, 'Artificial Intelligence Overview', 1265),
+	(10, 'Software Testing Techniques', 1010),
+	(11, 'Blockchain Fundamentals', 1395);
 
 -- Dumping structure for table databoard.view_records
 CREATE TABLE IF NOT EXISTS `view_records` (
