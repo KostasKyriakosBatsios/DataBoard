@@ -24,6 +24,27 @@ CREATE TABLE IF NOT EXISTS `final_records` (
   `total_view_time` int(11) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+-- Dumping data for table databoard.final_records: ~0 rows (approximately)
+
+-- Dumping structure for table databoard.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) unsigned NOT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- Dumping data for table databoard.users: ~0 rows (approximately)
+
+-- Dumping structure for table databoard.videos
+CREATE TABLE IF NOT EXISTS `videos` (
+  `id` int(11) unsigned NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `duration` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- Dumping data for table databoard.videos: ~0 rows (approximately)
+
 -- Dumping structure for table databoard.view_records
 CREATE TABLE IF NOT EXISTS `view_records` (
   `user` int(11) unsigned DEFAULT NULL,
@@ -32,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `view_records` (
   `end` int(11) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.view_records: ~27 rows (approximately)
+-- Dumping data for table databoard.view_records: ~31 rows (approximately)
 INSERT INTO `view_records` (`user`, `video`, `begin`, `end`) VALUES
 	(1, 10, 10, 25),
 	(1, 10, 10, 12),
@@ -62,7 +83,10 @@ INSERT INTO `view_records` (`user`, `video`, `begin`, `end`) VALUES
 	(8, 4, 70, 180),
 	(9, 11, 19, 83),
 	(9, 11, 37, 132),
-	(9, 11, 1, 50);
+	(9, 11, 1, 50),
+	(10, 2, 19, 98),
+	(10, 8, 10, 44),
+	(10, 8, 100, 328);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
