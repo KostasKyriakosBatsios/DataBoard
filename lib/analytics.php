@@ -25,7 +25,6 @@
     $maxViewTime_query = "SELECT MAX(total_view_time) AS max_view_time
                           FROM final_records";
 
-                           
     // Selecting Min View Time. 
     $minViewTime_query = "SELECT MIN(total_view_time) AS min_view_time
                           FROM final_records;";
