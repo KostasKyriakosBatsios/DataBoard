@@ -14,13 +14,11 @@
                     LIMIT 1";
 
     // Selecting Max Video Duration. 
-    // (potential for next time -> max_video_duration instead of max_video_id.)
-    $video_maxDur_query = "SELECT MAX(video_id) AS max_video_duration
+    $video_maxDur_query = "SELECT MAX(video_duration) AS max_video_duration
                            FROM final_records";
 
     // Selecting Min Video Duration. 
-    // (potential for next time -> min_video_duration instead of min_video_id.)
-    $video_minDur_query = "SELECT MIN(video_id) AS min_video_duration
+    $video_minDur_query = "SELECT MIN(video_duration) AS min_video_duration
                            FROM final_records";
 
     // Selecting Max View Time. 
