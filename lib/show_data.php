@@ -1,33 +1,45 @@
 <?php
     require_once "dbconnect.php";
 
-    $query = "SELECT * FROM view_records ORDER BY user DESC, video DESC"; // Select All, in descending order based on User ID and Video ID.
+    require_once "pagination.php";
 
-    $result = mysqli_query($con, $query);
+    // Selecting All, in descending order based on User ID and Video ID.
+    // Also, performing pagination with 10 rows per page.
+    $data = "SELECT * FROM final_records 
+             ORDER BY user_id DESC, video_id DESC 
+             LIMIT $start, $rows_per_page";
 
-    if(mysqli_num_rows($result) > 0) { // If num rows of database table aren't 0.
+    $result = $mysqli->query($data);
+
+    if($result->num_rows > 0) { // If num rows of database table aren't 0.
         ?>
             <thead>
                 <tr>
-                    <th>User</th>
-                    <th>Video</th>
-                    <th>Start</th>
-                    <th>End</th>
+                    <th>User ID</th>
+                    <th>Username</th>
+                    <th>Video ID</th>
+                    <th>Video Title</th>
+                    <th>Video Duration</th>
+                    <th>Total View Time</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     while($row = mysqli_fetch_assoc($result)) {
-                        $user = $row['user'];
-                        $video = $row['video'];
-                        $begin = $row['begin'];
-                        $end = $row['end'];
+                        $userID = $row['user_id'];
+                        $userName = $row['user_name'];
+                        $videoID = $row['video_id'];
+                        $videoTitle = $row['video_title'];
+                        $videoDuration = $row['video_duration'];
+                        $totalViewTime = $row['total_view_time'];
                         ?>
                             <tr>
-                                <td><?php echo $user; ?></td>
-                                <td><?php echo $video; ?></td>
-                                <td><?php echo $begin; ?></td>
-                                <td><?php echo $end; ?></td>
+                                <td><?php echo $userID; ?></td>
+                                <td><?php echo $userName; ?></td>
+                                <td><?php echo $videoID; ?></td>
+                                <td><?php echo $videoTitle; ?></td>
+                                <td><?php echo $videoDuration; ?></td>
+                                <td><?php echo $totalViewTime; ?></td>
                             </tr>
                         <?php
                     }

@@ -15,16 +15,16 @@ closeBtn.addEventListener('click', () => {
 
 //2)
 // Toggle between Light Mode <-> Dark Mode.
-const themeToggler = document.querySelector(".theme-toggler");
+// const themeToggler = document.querySelector(".theme-toggler");
 
-themeToggler.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme-variables');
-    themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
-    themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
-});
+// themeToggler.addEventListener('click', () => {
+//     document.body.classList.toggle('dark-theme-variables');
+//     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
+//     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
+// });
 
 
-//1)
+//3)
 // Get the current date in the format YYYY-MM-DD.
 function getCurrentDate() {
     const now = new Date();

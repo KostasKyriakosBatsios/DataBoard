@@ -12,6 +12,7 @@ $(document).ready(function() {
                 data: {input:input},
                 success: function(data) {
                     $("#show_data").css("display", "none");
+                    $(".pagination").css("display", "none");
                     $("#search_result").html(data);
                     $("#search_result").css("display", "block");
                 }
@@ -19,6 +20,7 @@ $(document).ready(function() {
         } else {
             $("#search_result").css("display", "none");
             $("#show_data").css("display", "table");
+            $(".pagination").css("display", "flex");
         }
     });
 });

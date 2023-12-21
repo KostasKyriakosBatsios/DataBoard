@@ -3,19 +3,26 @@
 
 /* Root Features */
 :root {
-    /* Main Colors: */
+    /* Light Theme Colors: */
     --color-primary: #7380ec;
     --color-danger: #ff7782;
     --color-success: #3bdea8;
     --color-warning: #ffbb55;
-    --color-white: #fff;
+    /* --color-white: #fff; */
     --color-info-dark: #7d8da1;
     --color-info-light: #dce1eb;
-    --color-dark: #363939;
-    --color-light: rgba(132, 139, 200, 0.18);
+    /* --color-dark: #363939; */
+    /* --color-light: rgba(132, 139, 200, 0.18); */
     --color-primary-variant: #111e88;
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
+    /* --color-dark-variant: #677483; */
+    /* --color-background: #f6f6f9; */
+
+    /* Dark Theme Colors */
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
 
     /* Main Styles */
     --card-border-radius: 2rem;
@@ -28,14 +35,14 @@
 }
 
 /* Dark Theme Colors */ 
-.dark-theme-variables {
+/* .dark-theme-variables {
     --color-background: #181a1e;
     --color-white: #202528;
     --color-dark: #edeffd;
     --color-dark-variant: #a3bdcc;
     --color-light: rgba(0, 0, 0, 0.4);
     --box-shadow: 0 2rem 3rem var(--color-light);
-}
+} */
 
 * {
     margin: 0;
@@ -298,46 +305,6 @@ main .insights .progress {
     border-radius: 50%;
 }
 
-main .insights svg {
-    width: 7rem;
-    height: 7rem;
-}
-
-main .insights svg circle {
-    fill: none;
-    stroke: var(--color-primary);
-    stroke-width: 14;
-    stroke-linecap: round;
-    transform: translate(5px, 5px);
-}
-
-main .insights .users svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .insights .videos svg circle {
-    stroke-dashoffset: 20;
-    stroke-dasharray: 80;
-}
-
-main .insights .views svg circle {
-    stroke-dashoffset: 35;
-    stroke-dasharray: 110;
-}
-
-main .insights .progress .number {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 main .insights .small {
     margin-top: 1.3rem;
     display: block;
@@ -396,10 +363,6 @@ main table tbody td {
 
 main table tbody tr:last-child td {
     border: none;
-}
-
-main .recent-data .previous_next_btns {
-    display: flex;
 }
 
 main .recent-data a {
