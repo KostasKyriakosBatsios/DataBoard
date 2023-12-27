@@ -1,0 +1,38 @@
+/* Pagination Styling */
+.pagination {
+    display: flex;
+}
+
+.pagination .page-info {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    margin-right: 800px;
+}
+
+.pagination .page-numbers a {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.pagination .page-numbers a.active {
+    color: var(--color-danger);
+}
+
+@media screen and (max-width: 1661px) {
+    .pagination .page-info {
+        margin-right: 500px;
+    }
+}
+
+@media screen and (max-width: 1485px) {
+    .pagination .page-info {
+        margin-right: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .pagination .page-info {
+        margin-right: 20px;
+    }
+}
