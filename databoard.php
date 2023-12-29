@@ -101,7 +101,7 @@
                     </div>
                     
                     <!-- Go to the first page -->
-                    <a href="?page-nr=1">First</a>
+                    <a href="?page-nr=1" id="pg-first">First</a>
 
                     <!-- Go to the previous page -->
                     <?php 
@@ -146,7 +146,7 @@
                     ?>
 
                     <!-- Go to the last page -->
-                    <a href="?page-nr=<?php echo $pages ?>">Last</a>
+                    <a href="?page-nr=<?php echo $pages ?>" id="pg-last">Last</a>
                 </div>
             </div>
         </main>
