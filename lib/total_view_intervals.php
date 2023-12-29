@@ -9,11 +9,11 @@
     $view_time_calc = "INSERT INTO final_records (user_id, video_id, total_view_time)
                        SELECT user, video, SUM(end - begin) AS total_view_intervals
                        FROM view_records
-                       GROUP BY user, video;";
+                       GROUP BY user, video";
     $mysqli->query($view_time_calc);    
 
     $final_data = "UPDATE final_records
-                    SET user_name = (s
+                    SET user_name = (
                         SELECT username
                         FROM users
                         WHERE final_records.user_id = users.id
