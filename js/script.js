@@ -11,5 +11,5 @@ closeIcon.addEventListener('click', () => {
 });
 
 function openDataBoard(button) {
-    window.location.href = "lib/databoard.php";
+    window.location.href = "databoard.php";
 }
