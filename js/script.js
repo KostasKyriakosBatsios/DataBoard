@@ -9,3 +9,7 @@ loginBtn.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     wrapper.classList.remove('active');
 });
+
+function openDataBoard(button) {
+    window.location.href = "lib/databoard.php";
+}

@@ -44,7 +44,7 @@
                         <label for="password">Password</label>
                     </div>
                     <!-- php operation for signing in to DataBoard -->
-                    <button type="submit" class="signin-btn">Sign in</button>
+                    <button type="button" onclick="openDataBoard(this)" class="signin-btn">Sign in</button>
                 </form>
             </div>
         </div>
