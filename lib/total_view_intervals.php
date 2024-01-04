@@ -7,9 +7,13 @@
     $mysqli->query($cleaning_data);
 
     $view_time_calc = "INSERT INTO final_records (user_id, video_id, total_view_time)
-                       SELECT user, video, SUM(end - begin) AS total_view_intervals
-                       FROM view_records
-                       GROUP BY user, video";
+                    SELECT user AS user_id, video AS video_id, SUM(view_time) AS total_view_time
+                    FROM (
+                        SELECT user, video, GREATEST(end_time - begin_time + 1, 1) AS view_time
+                        FROM view_records
+                        GROUP BY user, video, begin_time
+                    ) AS total_view_intervals
+                    GROUP BY user_id, video_id;";
     $mysqli->query($view_time_calc);    
 
     $final_data = "UPDATE final_records
