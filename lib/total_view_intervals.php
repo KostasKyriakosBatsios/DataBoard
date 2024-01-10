@@ -4,23 +4,29 @@
     //        2) Inserting the final data into final_records table with the calculated total_view_time (based on view_records table).
     //        3) Updating the final data from final_records table in order to insert user_name, video_title and video_duration.
     require_once "calculation_of_tvt.php";
-
+    
     $cleaning_data = "TRUNCATE TABLE final_records";
     $mysqli->query($cleaning_data);
 
-    // get all the entries from the table view_records
+    // getting all the entries of the table view_records
     $entries = "SELECT * FROM view_records";
-    $mysqli->query($entries);
-    $totalviewtime = calculateTotalViewTime($entries);
+    $result = $mysqli->query($entries);
+    $data = [];
+    while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
+    }
 
-    // displaying the user, video and total view time
+    // calling respectable function to calculate the total view time
+    $totalviewtime = calculateTotalViewTime($data);
+
+    // inserting the user, video and total view time into the final_records table
     $view_time_calc = "INSERT INTO final_records (user_id, video_id, total_view_time)
-                    SELECT user, video, ?
+                    SELECT user video, ?
                     FROM view_records
                     GROUP BY user, video;";
-    $st = $mysqli->query($view_time_calc);
+    $st = $mysqli->prepare($view_time_calc);
     $st->bind_param('i', $totalviewtime);
-    $st->execute();
+    $st->execute(); 
 
     $final_data = "UPDATE final_records
                     SET user_name = (
