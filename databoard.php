@@ -197,7 +197,7 @@
     <script>
         let links = document.querySelectorAll('.pagination .page-numbers > a');
         let bodyId = parseInt(document.body.id) - 1;
-        links[bodyId].classList.add("active")
+        links[bodyId].classList.add("active");
     </script>
 </body>
 </html>
