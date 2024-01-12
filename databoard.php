@@ -6,7 +6,7 @@
     if (isset($_SESSION["username"])) {
         $loggedInUsername = $_SESSION["username"];
     } else {
-        // Handle the case when no one is logged in
+        // Handle the case when the user tries to go to dashboard, without going to login first
         header("Location: index.php");
         exit();
     }

@@ -15,6 +15,8 @@ body {
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+    background-color: #181a1e;
+    color: white;
 }
 
 /* Header (top bar) */
@@ -42,6 +44,7 @@ header {
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
+    color: white;
 }
 
 .navigation a::after {
@@ -66,7 +69,8 @@ header {
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 2px solid #000;
+    border: 2px solid white;
+    color: white;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
