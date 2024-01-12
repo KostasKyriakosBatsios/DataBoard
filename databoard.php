@@ -67,7 +67,7 @@
                         <span class="material-icons-sharp">insights</span>
                         <h3>Analytics</h3>
                     </a>
-                    <a href="logout.php">
+                    <a href="lib/logout.php">
                         <span class="material-icons-sharp">logout</span>
                         <h3>Logout</h3>
                     </a>
@@ -181,7 +181,7 @@
                         <div class="info">
                             <p>Hey, <b>
                                 <?php
-                                    echo "$loggedInUsername!";
+                                    echo "$loggedInUsername";
                                 ?>
                                 </b>
                             </p>
