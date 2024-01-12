@@ -7,7 +7,8 @@
         $loggedInUsername = $_SESSION["username"];
     } else {
         // Handle the case when no one is logged in
-        echo "Welcome, Guest!";
+        header("Location: index.php");
+        exit();
     }
 ?>
 
