@@ -12,6 +12,6 @@
         echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
     }
 
-    // Calculating the total view intervals.
-    require_once "total_view_intervals.php";
+    // The calculation of Total View Times.
+    require_once "total_view_times.php";
 ?>
