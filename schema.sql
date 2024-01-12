@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               10.4.28-MariaDB - mariadb.org binary distribution
--- Server OS:                    Win64
--- HeidiSQL Version:             12.6.0.6765
+-- Διακομιστής:                  127.0.0.1
+-- Έκδοση διακομιστή:            10.4.32-MariaDB - mariadb.org binary distribution
+-- Λειτ. σύστημα διακομιστή:     Win64
+-- HeidiSQL Έκδοση:              12.6.0.6783
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -14,7 +14,21 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
--- Dumping structure for table databoard.final_records
+-- Dumping structure for πίνακας databoard.admins
+CREATE TABLE IF NOT EXISTS `admins` (
+  `admin_id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`admin_id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- Dumping data for table databoard.admins: ~2 rows (approximately)
+INSERT INTO `admins` (`admin_id`, `username`, `password`) VALUES
+	(1, 'Kostas', '1234'),
+	(2, 'Alex', '5678');
+
+-- Dumping structure for πίνακας databoard.final_records
 CREATE TABLE IF NOT EXISTS `final_records` (
   `user_id` int(11) unsigned DEFAULT NULL,
   `user_name` varchar(255) DEFAULT NULL,
@@ -26,14 +40,14 @@ CREATE TABLE IF NOT EXISTS `final_records` (
 
 -- Dumping data for table databoard.final_records: ~0 rows (approximately)
 
--- Dumping structure for table databoard.users
+-- Dumping structure for πίνακας databoard.users
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) unsigned NOT NULL,
   `username` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.users: ~10 rows (approximately)
+-- Dumping data for table databoard.users: ~100 rows (approximately)
 INSERT INTO `users` (`id`, `username`) VALUES
 	(1, 'Alex Oik'),
 	(2, 'Kostas Bats'),
@@ -46,7 +60,7 @@ INSERT INTO `users` (`id`, `username`) VALUES
 	(9, 'William Taylor'),
 	(10, 'Emma Anderson'),
 	(11, 'Alice Johnson'),
-  	(12, 'Bob Smith'),
+	(12, 'Bob Smith'),
 	(13, 'Charlie Brown'),
 	(14, 'Diana Miller'),
 	(15, 'Edward Wilson'),
@@ -136,7 +150,7 @@ INSERT INTO `users` (`id`, `username`) VALUES
 	(99, 'Oscar Taylor'),
 	(100, 'Piper Johnson');
 
--- Dumping structure for table databoard.videos
+-- Dumping structure for πίνακας databoard.videos
 CREATE TABLE IF NOT EXISTS `videos` (
   `id` int(11) unsigned NOT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -144,7 +158,7 @@ CREATE TABLE IF NOT EXISTS `videos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.videos: ~11 rows (approximately)
+-- Dumping data for table databoard.videos: ~100 rows (approximately)
 INSERT INTO `videos` (`id`, `title`, `duration`) VALUES
 	(1, 'Introduction to Programming', 930),
 	(2, 'Web Development Basics', 1365),
@@ -247,7 +261,7 @@ INSERT INTO `videos` (`id`, `title`, `duration`) VALUES
 	(99, 'Interoperability in Blockchain Networks', 1275),
 	(100, 'Node.js for Server-Side Development', 1020);
 
--- Dumping structure for table databoard.view_records
+-- Dumping structure for πίνακας databoard.view_records
 CREATE TABLE IF NOT EXISTS `view_records` (
   `user` int(11) unsigned DEFAULT NULL,
   `video` int(11) unsigned DEFAULT NULL,
@@ -255,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `view_records` (
   `end` int(11) unsigned DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.view_records: ~31 rows (approximately)
+-- Dumping data for table databoard.view_records: ~302 rows (approximately)
 INSERT INTO `view_records` (`user`, `video`, `begin`, `end`) VALUES
 	(1, 10, 10, 25),
 	(1, 10, 10, 12),

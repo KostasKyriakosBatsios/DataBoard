@@ -1,3 +1,5 @@
+// operations for opening and closing the login form
+
 const wrapper = document.querySelector('.wrapper');
 const loginBtn = document.querySelector('.login-btn');
 const closeIcon = document.querySelector('.icon-close')
@@ -9,7 +11,3 @@ loginBtn.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     wrapper.classList.remove('active');
 });
-
-function openDataBoard(button) {
-    window.location.href = "databoard.php";
-}

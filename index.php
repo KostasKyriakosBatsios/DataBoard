@@ -1,3 +1,25 @@
+<!-- process login -->
+<?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+
+        $sql = "SELECT * FROM admins WHERE username = '$username' AND password = '$password'";
+        $result = $mysql->query($sql);
+
+        if ($result->num_row > 0) {
+            // proper username and password
+            session_start();
+            $_SESSION["username"] = $username;
+            header("location: databoard.php");
+            exit();
+        }
+
+        // login failed
+        $message = "Wrong username or password. Try again";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,7 +50,12 @@
             </span>
             <div class="form-box login">
                 <h2>Login</h2>
-                <form action="#">
+                <?php
+                    if (isset($message)) {
+                        echo "<script type='text/javascript'>alert('$message');</script>";
+                    }
+                ?>
+                <form action="" method="post">
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="person"></ion-icon>
@@ -44,7 +71,7 @@
                         <label for="password">Password</label>
                     </div>
                     <!-- php operation for signing in to DataBoard -->
-                    <button type="button" onclick="openDataBoard(this)" class="signin-btn">Sign in</button>
+                    <input type="submit" value="Sign In" class="signin-btn">
                 </form>
             </div>
         </div>
