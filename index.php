@@ -1,6 +1,6 @@
 <!-- process login -->
 <?php
-    require_once "dbconnect.php";
+    require_once "lib/dbconnect.php";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST["username"];
@@ -9,7 +9,7 @@
         $sql = "SELECT * FROM admins WHERE username = '$username' AND password = '$password'";
         $result = $mysqli->query($sql);
 
-        if ($result->num_row > 0) {
+        if ($result->num_rows > 0) {
             // proper username and password
             session_start();
             $_SESSION["username"] = $username;
