@@ -5,7 +5,7 @@
         $password = $_POST["password"];
 
         $sql = "SELECT * FROM admins WHERE username = '$username' AND password = '$password'";
-        $result = $mysql->query($sql);
+        $result = $mysqli->query($sql);
 
         if ($result->num_row > 0) {
             // proper username and password
