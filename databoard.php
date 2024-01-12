@@ -1,3 +1,16 @@
+<?php
+    // Include this at the beginning of the file to start the session
+    session_start();
+
+    // Check if the username session variable is set
+    if (isset($_SESSION["username"])) {
+        $loggedInUsername = $_SESSION["username"];
+    } else {
+        // Handle the case when no one is logged in
+        echo "Welcome, Guest!";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,7 +67,7 @@
                         <span class="material-icons-sharp">insights</span>
                         <h3>Analytics</h3>
                     </a>
-                    <a href="#">
+                    <a href="logout.php">
                         <span class="material-icons-sharp">logout</span>
                         <h3>Logout</h3>
                     </a>
@@ -166,7 +179,12 @@
                     </div> -->
                     <div class="profile">
                         <div class="info">
-                            <p>Hey, <b>Alex</b></p>
+                            <p>Hey, <b>
+                                <?php
+                                    echo "$loggedInUsername!";
+                                ?>
+                                </b>
+                            </p>
                             <small class="text-muted">Admin</small>
                         </div>
                         <div class="profile-photo">
