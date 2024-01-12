@@ -33,7 +33,7 @@
         <!-- Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
         <title>DataBoard</title>
-        <link rel="shortcut icon" href="img/DataBoard.png" type="image/">
+        <link href="img/logo1.png" rel="icon">
     </head>
     <body>
         <!-- Header (top bar) -->
