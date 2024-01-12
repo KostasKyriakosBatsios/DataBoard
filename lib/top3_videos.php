@@ -26,6 +26,7 @@
 
     if($n1_video->num_rows > 0 && $n2_video->num_rows > 0 && $n3_video->num_rows > 0) { // If num rows of database table aren't 0.
         ?>
+            <!-- Printing the 1st video from the top 3 videos -->
             <div class="vid">
                 <div class="profile-photo">
                     <img src="img/number-1.png" alt="">
@@ -46,6 +47,7 @@
                     </small>
                 </div>
             </div>
+            <!-- Printing the 2nd video from the top 3 videos -->
             <div class="vid">
                 <div class="profile-photo">
                     <img src="img/number-2.png" alt="">
@@ -66,6 +68,7 @@
                     </small>
                 </div>
             </div>
+            <!-- Printing the 3rd video from the top 3 videos -->
             <div class="vid">
                 <div class="profile-photo">
                     <img src="img/number-3.png" alt="">
