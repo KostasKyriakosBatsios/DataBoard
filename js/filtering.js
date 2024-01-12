@@ -5,6 +5,7 @@ $(document).ready(function() {
         
         var input = $(this).val();
         
+        // if the input is not empty
         if(input != "") {
             $.ajax({
                 url: "lib/filter_search.php",

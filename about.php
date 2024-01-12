@@ -26,13 +26,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <!-- Responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DataBoard</title>
-        <link href="img/logo1.png" rel="icon">
         <link rel="stylesheet" href="css/style.css">
         <script defer src="js/script.js"></script>
         <!-- Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <title>DataBoard</title>
+        <link rel="shortcut icon" href="img/DataBoard.png" type="image/">
     </head>
     <body>
         <!-- Header (top bar) -->
