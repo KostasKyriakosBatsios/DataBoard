@@ -76,6 +76,37 @@
                 </form>
             </div>
         </div>
+        <!-- Main content -->
+        <div class="main">
+            <header class="main">
+                <h1>Welcome to DataBoard</h1>
+            </header>
+            <section id="section1" class="hidden">
+                <h2>1st section: my website</h2>
+                <p>blah blah blah</p>
+                <img src="img/pic_of_website.png" alt="picture of website">
+            </section>
+            <section id="section2" class="hidden">
+                <h2>2nd section: my dashboard</h2>
+                <p>blah blah blah</p>
+                <img src="img/dashboard.png" alt="dashboard">
+            </section>
+            <section id="section3" class="hidden">
+                <h2>3rd section: recent data</h2>
+                <p>blah blah blah</p>
+                <img src="img/recent_data.png" alt="recent data">
+            </section>
+            <section id="section4" class="hidden">
+                <h2>4th section: top videos</h2>
+                <p>blah blah blah</p>
+                <img src="img/top_videos.png" alt="top videos">
+            </section>
+            <section id="section5" class="hidden">
+                <h2>5th section: analytics</h2>
+                <p>blah blah blah</p>
+                <img src="img/analytics.png" alt="analytics">
+            </section>
+        </div>
         <!-- Installation of Ionics -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

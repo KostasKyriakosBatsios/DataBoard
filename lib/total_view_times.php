@@ -10,7 +10,7 @@
     $cleaning_data = "TRUNCATE TABLE final_records";
     $mysqli->query($cleaning_data);
 
-    // The following query simply calculates the total view intervals "The mistaken total view time": 
+    // The following query simply calculates the total view intervals "The false calculation of total view time": 
     /*  $view_time_calc = "INSERT INTO final_records (user_id, video_id, total_view_time)
                            SELECT user, video, SUM(end - begin) AS total_view_intervals
                            FROM view_records
