@@ -46,8 +46,8 @@
         </header>
         <!-- Main content -->
         <div id="main">
-            <h1>Welcome to DataBoard</h1>
-            <p>The dashboard site about videos</p>
+            <h1>Welcome to Data<span style="color: #3bdea8;">Board</span></h1>
+            <p>A Dashboard that offers real-time data and comprehensive information about videos. <br/> DataBoard provides a holistic overview of video performance, including users, views and durations.</p>
             <div class="sections">
                 <div class="introduction">
                     <h2>1. Introduction</h2>

@@ -19,7 +19,7 @@ body {
     color: white;
 }
 
-/* Header (top bar) */
+/* Header (Top Bar) */
 #top-bar {
     position: fixed;
     top: 0;
@@ -84,7 +84,7 @@ body {
     background: #3bdea8;
 }
 
-/* Login form */
+/* Login Form */
 .wrapper {
     position: relative;
     width: 400px;
@@ -187,25 +187,28 @@ body {
     font-weight: 500;
 }
 
-/* Main content */
+/* Main Content */
 #main {
     position: absolute;
     top: 100vh;
     left: 0;
     width: 100%;
     text-align: center;
-    /*background-color: #181a1e;*/
     padding: 20px;
     transition: top 3s ease;
 }
 
-.sections{
+#main h1 {
+    font-size: 50px;
+}
+
+.sections {
     padding: 100px;
-    text-align: left;
 }
 
 .sections h2 {
     padding-top: 25px;
+    font-size: 40px;
 }
 
 .sections p {
