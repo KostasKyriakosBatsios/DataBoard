@@ -9,9 +9,6 @@
 }
 
 body {
-    /* margin: 0;
-    padding: 0; */
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +20,7 @@ body {
 }
 
 /* Header (top bar) */
-header {
+#top-bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -197,7 +194,47 @@ header {
     left: 0;
     width: 100%;
     text-align: center;
-    background-color: #181a1e;
+    /*background-color: #181a1e;*/
     padding: 20px;
-    transition: top 2s ease;
+    transition: top 3s ease;
+}
+
+.sections{
+    padding: 100px;
+    text-align: left;
+}
+
+.sections h2 {
+    padding-top: 25px;
+}
+
+.sections p {
+    padding-bottom: 25px;
+}
+
+.sections img {
+    padding-top: 25px;
+}
+
+.website img {
+    height: 500px;
+}
+
+.dashboard img {
+    height: 200px;
+}
+
+.recent-data img {
+    height: 400px;
+    width: 500px;
+}
+
+.top-videos img {
+    height: 300px;
+    width: 350px;
+}
+
+.analytics img {
+    height: 450px;
+    width: 300px;
 }

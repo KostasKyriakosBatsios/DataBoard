@@ -29,6 +29,7 @@
         <!-- Responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <script defer src="js/about.js"></script>
         <!-- Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
@@ -45,6 +46,30 @@
                 <button class="login-btn">Login</button>
             </nav>
         </header>
+        <div id="info">
+            <h1 class="big-header">Developers</h1>
+            <p class="some-words">blah blah blah</p>
+            <div class="dev-section">
+                <div class="devs">
+                    <div class="sect">
+                        <img src="img/account.png" alt="" class="developer">
+                    </div>
+                    <div class="dev-name">
+                        Alexandros Oikonomou<br/>
+                        <a href="https://github.com/alexoiik" class="our-social" target="_blank"><i style="color: white;" class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="devs">
+                    <div class="sect">
+                        <img src="img/account.png" alt="" class="developer">
+                    </div>
+                    <div class="dev-name">
+                        Kostas Kyriakos Batsios<br/>
+                        <a href="https://github.com/KostasKyriakosBatsios" class="our-social" target="_blank"><i style="color: white;" class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Login form -->
         <div class="wrapper">
             <span class="icon-close">

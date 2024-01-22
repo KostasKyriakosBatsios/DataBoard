@@ -12,10 +12,11 @@ closeIcon.addEventListener('click', () => {
     wrapper.classList.remove('active');
 });
 
+// animation
 document.addEventListener("DOMContentLoaded", function() {
     var main = document.getElementById("main");
 
     setTimeout(function() {
-        main.style.top = "0";
-    }, 2000)
+        main.style.top = "20vh";
+    }, 1500)
 });

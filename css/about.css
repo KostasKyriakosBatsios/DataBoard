@@ -9,6 +9,7 @@
 }
 
 body {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,4 +186,40 @@ header {
     cursor: pointer;
     font-size: 1em;
     font-weight: 500;
+}
+
+/* info content */
+#info {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    /*background-color: #181a1e;*/
+    padding: 20px;
+    transition: top 3s ease;
+}
+
+.dev-section {
+    display: flex;
+    justify-content: center;
+}
+
+.dev-section .devs  {
+    text-align: center;
+    margin: 0 55px; 
+}
+
+.dev-section .devs img.developer {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;  
+}
+
+.dev-section .devs .dev-name {
+    padding-top: 20px;
+}
+
+.dev-section .devs .dev-name .our-social {
+    font-size: 21px;
 }

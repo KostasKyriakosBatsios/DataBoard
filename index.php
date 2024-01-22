@@ -36,7 +36,7 @@
     </head>
     <body>
         <!-- Header (top bar) -->
-        <header>
+        <header id="top-bar">
             <h2 class="logo">Data<span style="color: #3bdea8;">Board</span></h2>
             <nav class="navigation">
                 <a href="index.php">Home</a>
@@ -44,6 +44,42 @@
                 <button class="login-btn">Login</button>
             </nav>
         </header>
+        <!-- Main content -->
+        <div id="main">
+            <h1>Welcome to DataBoard</h1>
+            <p>The dashboard site about videos</p>
+            <div class="sections">
+                <div class="introduction">
+                    <h2>1. Introduction</h2>
+                    <p>blah blah blah</p>
+                </div>
+                <div class="website">
+                    <h2>2. Website</h2>
+                    <p>blah blah blah</p>
+                    <img src="img/pic_of_website.png" alt="picture of our website">
+                </div>
+                <div class="dashboard">
+                    <h2>3. Dashboard</h2>
+                    <p>blah blah blah</p>
+                    <img src="img/dashboard.png" alt="picture of our website">
+                </div>
+                <div class="recent-data">
+                    <h2>3. Recent data</h2>
+                    <p>blah blah blah</p>
+                    <img src="img/recent_data.png" alt="picture of our website">
+                </div>
+                <div class="top-videos">
+                    <h2>4. Top videos</h2>
+                    <p>blah blah blah</p>
+                    <img src="img/top_videos.png" alt="picture of our website">
+                </div>
+                <div class="analytics">
+                    <h2>5. Analytics</h2>
+                    <p>blah blah blah</p>
+                    <img src="img/analytics.png" alt="picture of our website">
+                </div>
+            </div>
+        </div>
         <!-- Login form -->
         <div class="wrapper">
             <span class="icon-close">
@@ -75,10 +111,6 @@
                     <input type="submit" value="Sign In" class="signin-btn">
                 </form>
             </div>
-        </div>
-        <!-- Main content -->
-        <div id="main">
-            <h1>Welcome to DataBoard</h1>
         </div>
         <!-- Installation of Ionics -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

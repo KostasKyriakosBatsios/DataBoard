@@ -11,3 +11,12 @@ loginBtn.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     wrapper.classList.remove('active');
 });
+
+// animation
+document.addEventListener("DOMContentLoaded", function() {
+    var info = document.getElementById("info");
+
+    setTimeout(function() {
+        info.style.top = "20vh";
+    }, 1500)
+});
