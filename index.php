@@ -29,8 +29,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DataBoard</title>
         <link href="img/logo1.png" rel="icon">
-        <link rel="stylesheet" href="css/style.css">
-        <script defer src="js/script.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <script defer src="js/index.js"></script>
         <!-- Material Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     </head>
@@ -75,6 +75,10 @@
                     <input type="submit" value="Sign In" class="signin-btn">
                 </form>
             </div>
+        </div>
+        <!-- Main content -->
+        <div id="main">
+            <h1>Welcome to DataBoard</h1>
         </div>
         <!-- Installation of Ionics -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
