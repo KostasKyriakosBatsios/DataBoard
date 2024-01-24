@@ -1,4 +1,4 @@
-<!-- process login -->
+<!-- Process of Login -->
 <?php
     require_once "lib/dbconnect.php";
 
@@ -10,15 +10,15 @@
         $result = $mysqli->query($sql);
 
         if ($result->num_rows > 0) {
-            // proper username and password
+            // Proper username and password.
             session_start();
             $_SESSION["username"] = $username;
             header("location: dashboard.php");
             exit();
         }
 
-        // login failed
-        $message = "Wrong username or password. Try again";
+        // Login Failed.
+        $message = "Wrong username or password. Please try again.";
     }
 ?>
 
@@ -26,29 +26,29 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!-- Responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/about.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <script defer src="js/about.js"></script>
-        <!-- Material Icons -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
         <title>DataBoard</title>
         <link href="img/logo1.png" rel="icon">
-    </head>
+        <link rel="stylesheet" href="css/style.css">
+        <!-- CSS Files & Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    </head> 
     <body>
-        <!-- Header (top bar) -->
-        <header>
-            <h2 class="logo">Data<span style="color: #3bdea8;">Board</span></h2>
+        <!-- Header (Top Bar) -->
+        <header id="top-bar">
+            <h2 class="logo"><img src="img/logo1.png" width="25px" height="25px"> Data<span style="color: #3bdea8;">Board</span></h2>
             <nav class="navigation">
                 <a href="index.php">Home</a>
                 <a href="about.php">About</a>
                 <button class="login-btn">Login</button>
             </nav>
         </header>
+
+        <!-- Info Content -->
         <div id="info">
             <h1 class="big-header">Developers</h1>
-            <p class="some-words">blah blah blah</p>
+            <!-- <p class="some-words">blah blah blah</p> -->
             <div class="dev-section">
                 <div class="devs">
                     <div class="sect">
@@ -70,7 +70,8 @@
                 </div>
             </div>
         </div>
-        <!-- Login form -->
+
+        <!-- Login Form -->
         <div class="wrapper">
             <span class="icon-close">
                 <ion-icon name="close"></ion-icon>
@@ -97,13 +98,18 @@
                         <input type="password" id="password" name="password" required>
                         <label for="password">Password</label>
                     </div>
-                    <!-- php operation for signing in to DataBoard -->
+                    <!-- PHP operation for signing in DataBoard -->
                     <input type="submit" value="Sign In" class="signin-btn">
                 </form>
             </div>
         </div>
+
         <!-- Installation of Ionics -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- Using 'ScrollReveal' by: https://github.com/jlmakes/scrollreveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-- JS Scripts -->
+        <script src="js/script.js"></script>
     </body>
 </html>

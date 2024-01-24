@@ -66,8 +66,8 @@ body {
 }
 
 .navigation .login-btn {
-    width: 130px;
-    height: 50px;
+    width: 110px;
+    height: 45px;
     background: transparent;
     border: 2px solid white;
     color: white;
@@ -190,7 +190,49 @@ body {
 /* Main Content */
 #main {
     position: absolute;
-    top: 100vh;
+    top: 35vh;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#main h1 {
+    font-size: 50px;
+}
+
+#main h2 {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+#main .about-app {
+    text-align: left;
+    padding-left: 250px;
+}
+
+#main .about-app p {
+    margin-left: 8px;
+}
+
+#main .about-app .description {
+    padding-right: 220px;
+}
+
+#main .about-app .subsections {
+    font-size: 20px;
+}   
+
+#main .main-logo {
+    padding-right: 360px;
+}
+
+/* info content */
+#info {
+    position: absolute;
     left: 0;
     width: 100%;
     text-align: center;
@@ -198,46 +240,51 @@ body {
     transition: top 3s ease;
 }
 
-#main h1 {
-    font-size: 50px;
+.dev-section {
+    display: flex;
+    justify-content: center;
 }
 
-.sections {
-    padding: 100px;
+.dev-section .devs  {
+    text-align: center;
+    margin: 0 55px; 
 }
 
-.sections h2 {
-    padding-top: 25px;
-    font-size: 40px;
+.dev-section .devs img.developer {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;  
 }
 
-.sections p {
-    padding-bottom: 25px;
+.dev-section .devs .dev-name {
+    padding-top: 20px;
 }
 
-.sections img {
-    padding-top: 25px;
+.dev-section .devs .dev-name .our-social {
+    font-size: 21px;
 }
 
-.website img {
-    height: 500px;
+/* Responsiveness */
+@media screen and (max-width: 1661px) {
+    #main .description {
+        padding: 0 350px;
+    }
 }
 
-.dashboard img {
-    height: 200px;
+@media screen and (max-width: 1360px) {
+    #main .description {
+        padding: 0 150px;
+    }
 }
 
-.recent-data img {
-    height: 400px;
-    width: 500px;
+@media screen and (max-width: 890px) {
+    #main .description {
+        padding: 0 50px;
+    }
 }
 
-.top-videos img {
-    height: 300px;
-    width: 350px;
-}
-
-.analytics img {
-    height: 450px;
-    width: 300px;
+@media screen and (max-width: 650px) {
+    #main .description {
+        padding: 0;
+    }
 }
