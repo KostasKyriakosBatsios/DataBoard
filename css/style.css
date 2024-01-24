@@ -162,7 +162,7 @@ body {
     border: none;
     outline: none;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 35px 0 5px;
     color: white;
 }
@@ -190,47 +190,60 @@ body {
 /* Main Content */
 #main {
     position: absolute;
-    top: 35vh;
+    top: 25vh;
     left: 0;
     right: 0;
     width: 100%;
-    text-align: center;
     padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    gap: 2px;
 }
 
 #main h1 {
     font-size: 50px;
+    font-weight: 500;
 }
 
 #main h2 {
     font-size: 30px;
     margin-top: 5px;
+    font-weight: 500;
 }
 
 #main .about-app {
-    text-align: left;
-    padding-left: 250px;
-}
-
-#main .about-app p {
-    margin-left: 8px;
+    padding-left: 260px;
 }
 
 #main .about-app .description {
-    padding-right: 220px;
+    text-align: justify;
+    margin-right: 220px;
 }
 
-#main .about-app .subsections {
+#main .about-app .features {
     font-size: 20px;
 }   
 
-#main .main-logo {
-    padding-right: 360px;
+#main .about-app .features h3 {
+    color: #3bdea8;
+    font-weight: 400;
 }
 
-/* info content */
+#main .about-app .features p.desc {
+    text-align: justify;
+    font-size: 16px;
+    margin-left: 18px;
+    padding-right: 220px;
+}
+
+#main .main-logo {
+    padding-right: 360px;
+    padding-top: 55px;
+}
+
+/* Info Content */
 #info {
     position: absolute;
     left: 0;
@@ -247,7 +260,7 @@ body {
 
 .dev-section .devs  {
     text-align: center;
-    margin: 0 55px; 
+    margin: 30px 55px; 
 }
 
 .dev-section .devs img.developer {
@@ -262,29 +275,94 @@ body {
 
 .dev-section .devs .dev-name .our-social {
     font-size: 21px;
+    color: white;
+}
+
+
+.dev-section .devs .dev-name .our-social i:hover {
+    color: #3bdea8;
 }
 
 /* Responsiveness */
 @media screen and (max-width: 1661px) {
-    #main .description {
-        padding: 0 350px;
+    #main .about-app .description {
+        margin-right: 150px;
+    }
+
+    #main .about-app .features p.desc {
+        padding-right: 150px;
+    }
+
+    #main .main-logo {
+        padding-right: 180px;
     }
 }
 
-@media screen and (max-width: 1360px) {
-    #main .description {
-        padding: 0 150px;
+@media screen and (max-width: 1520px) {
+    #main .about-app {
+        padding-left: 80px;
     }
 }
 
-@media screen and (max-width: 890px) {
-    #main .description {
-        padding: 0 50px;
+@media screen and (max-width: 1260px) {
+    #main .about-app .description {
+        margin-right: 50px;
+    }
+
+    #main .about-app .features p.desc {
+        padding-right: 50px;
+    }   
+}
+
+@media screen and (max-width: 1200px) {
+    #top-bar {
+        background: #000000d4;
+    }
+
+    #main {
+        display: block;
+    }
+
+    #main .about-app .description {
+        margin-right: 80px;
+    }
+
+    #main .about-app .features p.desc {
+        padding-right: 80px;
+    }   
+
+    #main .main-logo {
+        padding-left: 80px;
     }
 }
 
-@media screen and (max-width: 650px) {
-    #main .description {
-        padding: 0;
+@media screen and (max-width: 770px) {
+    #top-bar {
+        padding: 20px 24px;
+    }
+
+    #top-bar .logo img {
+        display: none;
+    }
+
+    .navigation a:hover {
+        color: #3bdea8;
+    }
+
+    .navigation a::after {
+        display: none;
+    }
+
+    #main .about-app {
+        padding-left: 15px;
+    }
+    
+    #main .main-logo img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .dev-section {
+        display: block;
     }
 }

@@ -48,7 +48,7 @@
         <!-- Info Content -->
         <div id="info">
             <h1 class="big-header">Developers</h1>
-            <!-- <p class="some-words">blah blah blah</p> -->
+            <p class="some-words">blah blah blah</p>
             <div class="dev-section">
                 <div class="devs">
                     <div class="sect">
@@ -56,7 +56,7 @@
                     </div>
                     <div class="dev-name">
                         Alexandros Oikonomou<br/>
-                        <a href="https://github.com/alexoiik" class="our-social" target="_blank"><i style="color: white;" class="fab fa-github"></i></a>
+                        <a href="https://github.com/alexoiik" class="our-social" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="devs">
@@ -65,7 +65,7 @@
                     </div>
                     <div class="dev-name">
                         Kostas Kyriakos Batsios<br/>
-                        <a href="https://github.com/KostasKyriakosBatsios" class="our-social" target="_blank"><i style="color: white;" class="fab fa-github"></i></a>
+                        <a href="https://github.com/KostasKyriakosBatsios" class="our-social" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>

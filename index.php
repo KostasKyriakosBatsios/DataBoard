@@ -50,11 +50,14 @@
                 <h1 class="intro">Welcome to Data<span style="color: #3bdea8;">Board</span></h1>
                 <p class="description">A Dashboard that offers real-time data and comprehensive information about videos. DataBoard provides a holistic overview of video performance, including users, views and durations.</p>
                 
-                <div class="subsections">
-                    <h2 class="intro">Dashboard <span style="color: #3bdea8;">subsections</span></h2>
-                    <p><span style="color: #3bdea8;">1.</span> Recent Data</p>
-                    <p><span style="color: #3bdea8;">2.</span> Top Videos</p>
-                    <p><span style="color: #3bdea8;">3.</span> Analytics</p>
+                <div class="features">
+                    <h2 class="intro">Discover the <span style="color: #3bdea8;">Features</span></h2>
+                    <h3>• Recent Data:</h3>
+                    <p class="desc">Stay in the loop with the latest updates. Our Recent Data section offers a snapshot of the most recent activities, ensuring you're always up-to-date with the freshest information.</p>
+                    <h3>• Top Videos:</h3>
+                    <p class="desc">Explore the Top Videos section to see which content is making waves. Gain valuable insights about which videos get the most views.</p>
+                    <h3>• Analytics:</h3>
+                    <p class="desc">Our Analytics section provides a deep dive into recent users, statistics of video durations, and also characteristics of views.</p>
                 </div>
             </div>
             <div class="main-logo">
