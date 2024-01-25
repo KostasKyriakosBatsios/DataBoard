@@ -47,12 +47,11 @@
 
         <!-- Info Content -->
         <div id="info">
-            <h1 class="big-header">Developers</h1>
-            <p class="some-words">blah blah blah</p>
+            <h1 class="big-header">Developers of Data<span style="color: #3bdea8;">Board</span></h1>
             <div class="dev-section">
                 <div class="devs">
                     <div class="sect">
-                        <img src="img/account.png" alt="" class="developer">
+                        <img src="img/alex.jpg" alt="" class="developer">
                     </div>
                     <div class="dev-name">
                         Alexandros Oikonomou<br/>
@@ -61,7 +60,7 @@
                 </div>
                 <div class="devs">
                     <div class="sect">
-                        <img src="img/account.png" alt="" class="developer">
+                        <img src="img/kostas.jpg" alt="" class="developer">
                     </div>
                     <div class="dev-name">
                         Kostas Kyriakos Batsios<br/>
