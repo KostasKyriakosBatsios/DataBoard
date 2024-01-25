@@ -35,8 +35,11 @@ CREATE TABLE IF NOT EXISTS `final_records` (
   `video_id` int(11) unsigned DEFAULT NULL,
   `video_title` varchar(255) DEFAULT NULL,
   `video_duration` int(11) unsigned DEFAULT NULL,
-  `total_view_time` int(11) unsigned DEFAULT NULL
+  `total_view_time` int(11) unsigned DEFAULT NULL,
+  `last_change` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- Dumping data for table databoard.final_records: ~107 rows (approximately)
 
 -- Dumping structure for table databoard.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -45,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- Dumping data for table databoard.users: ~1.000 rows (approximately)
+-- Dumping data for table databoard.users: ~915 rows (approximately)
 INSERT INTO `users` (`id`, `username`) VALUES
 	(1, 'Alex Oik'),
 	(2, 'Kostas Bats'),
