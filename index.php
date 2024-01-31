@@ -48,7 +48,7 @@
         <div id="main">
             <div class="about-app">
                 <h1 class="intro">Welcome to Data<span style="color: #3bdea8;">Board</span></h1>
-                <p class="description">A Dashboard that offers real-time data and comprehensive information about videos. DataBoard provides a holistic overview of video performance, including users, views and durations.</p>
+                <p class="description">A Dashboard that offers data and comprehensive information about videos. DataBoard provides a holistic overview of video performance, including users, views and durations.</p>
                 
                 <div class="features">
                     <h2 class="intro">Discover the <span style="color: #3bdea8;">Features</span></h2>
